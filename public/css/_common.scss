@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans+TC:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$primary: #F1D229;
+$secondary: #B78D23;
+$white: #fff;
+$dark: #12121C;
+$gray-E1: #E1E1E1;
+$font-lalezar: "Lalezar", serif;
+$font-workSans: "Work Sans", serif;
+$transition: 0.3s;
+
+body {
+    font-family: "Noto Sans TC", serif;
+    color: #000;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: $transition;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+input, button {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+.main {
+    padding-top: 115px;
+    @media screen and (max-width: 991px) {
+        padding-top: 70px;
+    }
+    @media screen and (max-width: 767px) {
+        padding-top: 50px;
+    }
+}
+
+.container {
+    max-width: 1500px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @media screen and (max-width: 1199px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.header {
+    background-color: $dark;
+    padding: 11px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &_logo {
+        width: 96px;
+        display: block;
+        >img {
+            width: 100%;
+        }
+    }
+    &_nav {
+        li {
+            margin-left: 38px;
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                color: $white;
+                font-size: 20px;
+                font-weight: 500;
+                box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+                transition: $transition;
+                display: block;
+                position: relative;
+                &:hover {
+                    color: $primary;
+                }
+                &.active {
+                    color: $primary;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 34px;
+                    background-color: $primary;
+                    top: calc(100% + 8px);
+                    left: 50%;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &_menu {
+        width: 20px;
+        >img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        height: 70px;
+        >.container {
+            height: 100%;
+        }
+        &_logo {
+            width: 42px;
+        }
+        &_nav {
+            position: fixed;
+            width: 100%;
+            height: calc(100vh - 50px);
+            top: 50px;
+            // right: 0;
+            left: 100%;
+            background-color: #000;
+            padding: 60px 20px;
+            transition: $transition;
+            li {
+                margin: 30px 0;
+                a {
+                    display: block;
+                    width: fit-content;
+                    margin: 0 auto;
+                    z-index: 0;
+                    font-size: 16px;
+                    &.active {
+                        color: #fff;
+                    }
+                    &::after {
+                        width: calc(100% + 10px);
+                        height: 11px;
+                        background-color: $secondary;
+                        top: calc(100% - 10px);
+                        transform: translateX(-50%) skewX(-30deg);
+                        z-index: -1;
+                    }
+                }
+            }
+            &.active {
+                left: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        height: 50px;
+    }
+
+}
+
+.footer {
+    &_main {
+        background-image: url(../img/footer-bg.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 35px 0 32px;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &_intro {
+        color: #DEDEDE;
+        width: 57%;
+        p {
+            line-height: 1.9;
+            margin: 0;
+        }
+    }
+    &_logo {
+        width: 155px;
+        margin-right: 45px;
+    }
+    &_ig {
+        margin-bottom: 15px;
+        img {
+            width: 22px;
+            margin-right: 8px;
+        }
+        span {
+            color: $primary;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
+    &_link {
+        width: 20%;
+        ul {
+            &:first-child {
+                margin-right: 45px;
+            }
+            li {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                a {
+                    font-size: 16px;
+                    font-weight: 500;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    &_copyright {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        font-size: 16px;
+        color: #A9A9A9;
+        margin: 0;
+    }
+    &_contact {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        h3 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: $font-workSans;
+            margin-bottom: 12px;
+        }
+        &_form {
+            width: 100%;
+            height: 50px;
+            border-radius: 100px;
+            background-color: rgba(255, 255, 255, 0.26);
+            display: flex;
+            align-items: center;
+            input {
+                width: calc(100% - 50px);
+                height: 100%;
+                padding: 0 16px;
+                color: #fff;
+                &::placeholder {
+                    color: $gray-E1;
+                }
+            }
+            button {
+                width: 50px;
+                height: 100%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1199px) {
+        &_main {
+            .container {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        &_link {
+            ul {
+                &:first-child {
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_main {
+            background-image: none;
+            background-color: $dark;
+            padding: 8px 0 28px;
+            .container {
+                display: block;
+            }
+        }
+        &_intro {
+            width: 100%;
+            margin-bottom: 26px;
+            p {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        &_logo {
+            display: block;
+            width: 130px;
+            margin: 0 auto;
+        }
+        &_ig {
+            width: fit-content;
+            margin: 0 auto 8px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_copyright {
+            padding: 10px 30px;
+            font-size: 12px;
+        }
+    }
+}
+
