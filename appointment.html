@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Noto+Sans+TC:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="./index.html" class="header_logo"><img src="./public/img/logo.svg" alt=""></a>
+            <nav class="header_nav">
+                <ul class="d-lg-flex align-items-center">
+                    <li><a href="./index.html">首頁</a></li>
+                    <li><a href="./about.html">關於我們</a></li>
+                    <li><a href="./news.html">最新消息</a></li>
+                    <li><a href="./award.html">歷年得獎紀錄</a></li>
+                    <li><a class="active">預約體驗</a></li>
+                    <li><a href="./cooperate.html">合作洽談</a></li>
+                    <li><a href="./highlight.html">精彩時刻</a></li>
+                </ul>
+            </nav>
+            <div class="header_menu d-lg-none"><img src="./public/img/menu.svg" alt=""></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="banner">
+            <img class="banner_bg d-lg-block d-none" src="./public/img/banner-news.png" alt="">
+            <img class="banner_bg d-lg-none" src="./public/img/banner-m.png" alt="">
+            <div class="banner_text">
+                <div class="container">
+                    <h1 class="banner_text_en">APPOINTMENT</h1>
+                    <h2 class="banner_text_ch">預約體驗</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="innerpage appointment">
+            <div class="breadcrumb">
+                <div class="container">
+                    <ul class="d-flex align-items-center justify-content-end">
+                        <li><a href="./index.html">首頁</a></li>
+                        <li><a class="active">預約體驗</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <form action="" class="form-common">
+                <div class="form-common_item">
+                    <div class="form-common_title">
+                        <h3>基本資料</h3>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">姓名</label>
+                        <input class="input" type="text" value="王小美">
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">性別</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="gender" id="male">
+                                <label for="male">男</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="gender" id="female">
+                                <label for="female">女</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">出生日期</label>
+                        <input class="input" type="text" placeholder="請輸入出生日期">
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">聯絡電話</label>
+                        <input class="input" type="number" placeholder="請輸入電話/手機">
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">緊急聯絡人</label>
+                        <input class="input" type="text" placeholder="請輸入緊急聯絡人">
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">緊急聯絡人之聯絡電話</label>
+                        <input class="input" type="number" placeholder="請輸入緊急聯絡人之聯絡電話">
+                    </div>
+                </div>
+                <div class="form-common_item">
+                    <div class="form-common_title">
+                        <h3>身體狀況</h3>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">健康狀況（是否有慢性病或運動禁忌）</label>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="health" id="health-yes">
+                                <label for="health-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="health" id="health-no">
+                                <label for="health-no">否</label>
+                            </div>
+                        </div>
+                        <input class="input" type="text" placeholder="勾選”是”，請填寫原因">
+                    </div>
+                </div>
+                <div class="form-common_item">
+                    <div class="form-common_title">
+                        <h3>過去經驗</h3>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">過往是否參加龍舟的經驗</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="experience-boat" id="experience-boat-yes">
+                                <label for="experience-boat-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="experience-boat" id="experience-boat-no">
+                                <label for="experience-boat-no">否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">是否具備槳手、鼓手或舵手的經驗</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="experience-rower" id="experience-rower-yes">
+                                <label for="experience-rower-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="experience-rower" id="experience-rower-no">
+                                <label for="experience-rower-no">否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">過去參加過的比賽或訓練經歷</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="experience-game" id="experience-game-yes">
+                                <label for="experience-game-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="experience-game" id="experience-game-no">
+                                <label for="experience-game-no">否</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-common_item">
+                    <div class="form-common_title">
+                        <h3>參加意向</h3>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">是否有意參加比賽或僅參加訓練？</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="willing" id="willing-yes">
+                                <label for="willing-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="willing" id="willing-no">
+                                <label for="willing-no">否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">是否可以固定時間參加練習？</label>
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center me-5 form-common_radio">
+                                <input class="radio" type="radio" name="fixtime" id="fixtime-yes">
+                                <label for="fixtime-yes">是</label>
+                            </div>
+                            <div class="d-flex align-items-center form-common_radio">
+                                <input class="radio" type="radio" name="fixtime" id="fixtime-no">
+                                <label for="fixtime-no">否</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-common_input">
+                        <label for="">偶爾參加練習的時間彈性？</label>
+                        <input class="input" type="text" placeholder="請填寫可以的時間">
+                    </div>
+                </div>
+                <div class="form-common_btn">
+                    <button class="btn-bg-black">重填</button>
+                    <button class="btn-bg-brown">送出</button>
+                </div>
+            </form>
+
+            
+    </main>
+
+    <footer class="footer">
+        <div class="footer_main">
+            <div class="container">
+                <div class="footer_intro d-lg-flex align-items-center">
+                    <img class="footer_logo" src="./public/img/logo-2.svg" alt="">
+                    <div>
+                        <a href="" class="footer_ig d-flex align-items-center">
+                            <img src="./public/img/InstagramFilled.svg" alt="">
+                            <span>instagram</span>
+                        </a>
+                        <p>
+                            我們的隊伍成立於2022年，致力於推廣龍舟文化和團隊精神。我們的隊伍由一群充滿熱情的社會人士組成，無論你是龍舟運動的初學者還是有經驗的選手，我們都誠摯地歡迎志同道合的你加入我們的行列。
+                        </p>
+                    </div>
+                </div>
+                <div class="footer_link d-lg-flex d-none">
+                    <ul>
+                        <li><a href="./index.html">首頁</a></li>
+                        <li><a href="./about.html">關於我們</a></li>
+                        <li><a href="./news.html">最新消息</a></li>
+                        <li><a href="./award.html">歷年得獎紀錄</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="./appointment.html">預約體驗</a></li>
+                        <li><a href="./cooperate.html">合作洽談</a></li>
+                        <li><a href="./highlight.html">精彩時刻</a></li>
+                    </ul>
+                </div>
+                <div class="footer_contact d-lg-none">
+                    <h3>Contant Us</h3>
+                    <div class="footer_contact_form">
+                        <input type="email" placeholder="輸入您的Email">
+                        <button><img src="./public/img/arrow-right-triangle.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer_copyright">Copyright © Lucky Wave All Rights Reserved </p>
+    </footer>
+
+    
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+
+
+</body>
+</html>

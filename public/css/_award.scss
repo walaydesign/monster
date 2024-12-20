@@ -1,0 +1,179 @@
+.award {
+    padding-bottom: 275px;
+    &_content {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 0 0 auto;
+    }
+    &_item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 56px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &_year {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95px;
+        padding: 19px 0;
+        background-color: $primary;
+        color: $dark;
+        font-size: 30px;
+        font-family: "Arial";
+        font-weight: 700;
+        line-height: 1;
+    }
+    &_list {
+        padding-left: 20px;
+        width: calc(100% - 95px);
+        &_item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 0;
+            &:last-child {
+                margin-bottom: 0;
+                &::before {
+                    display: none;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: calc(100% + 30px);
+                background-color: #424242;
+                top: 50%;
+                left: 9px;
+                z-index: -1;
+            }
+        }
+        &_dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $primary;
+            border: 4px solid #000;
+            margin-right: 15px;
+        }
+        &_main {
+            width: calc(100% - 18px - 15px);
+            background-color: #fff;
+            padding: 19px;
+            border: 1px solid #DFDFDF;
+            display: flex;
+            ul {
+                width: calc(100% - 205px);
+                padding-left: 25px;
+                flex-wrap: wrap;
+                li {
+                    font-weight: 700;
+                    font-size: 22px;
+                    color: $dark;
+                    position: relative;
+                    padding-right: 20px;
+                    &:last-child {
+                        padding-right: 0;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &:after {
+                        position: absolute;
+                        content: "、";
+                        font-weight: 700;
+                        font-size: 22px;
+                        color: $dark;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        &_competition {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            color: $secondary;
+            width: 205px;
+            position: relative;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 37px;
+                background-color: #DADADA;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-bottom: 150px;
+        &_list {
+            &_main {
+                ul {
+                    li {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 60px;
+        &_item {
+            margin-bottom: 40px;
+        }
+        &_year {
+            width: 76px;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+        &_list {
+            width: calc(100% - 76px);
+            padding-left: 10px;
+            &_item {
+                align-items: flex-start;
+                margin-bottom: 16px;
+                &::before {
+                    height: calc(100% + 16px);
+                    top: 10px;
+                }
+            }
+            &_dot {
+                margin-top: 10px;
+            }
+            &_main {
+                display: block;
+                padding: 8px 12px;
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    li {
+                        font-size: 14px;
+                        padding: 0;
+                    }
+                }
+            }
+            &_competition {
+                font-size: 16px;
+                width: 100%;
+                margin-bottom: 8px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
