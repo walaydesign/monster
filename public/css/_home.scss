@@ -302,7 +302,7 @@
         @media screen and (max-width: 500px) {
             padding-left: 10px;
             padding-right: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             &_title {
                 &_ch {
                     font-size: 13px;
@@ -492,7 +492,7 @@
                 margin-bottom: 60px;
             }
             &_main {
-                padding: 0 20px 30px;
+                padding: 0 20px 60px;
             }
             &_step {
                 background-image: url(../img/step-bg-m.png);
@@ -511,7 +511,7 @@
         }
         @media screen and (max-width: 575px) {
             padding-top: 30px;
-            margin-bottom: 43px;
+            margin-bottom: 80px;
             &_title {
                 margin-bottom: 22px;
                 &_en {

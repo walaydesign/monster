@@ -1151,7 +1151,7 @@ input[type="number"] {
   .home-award {
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .home-award_title_ch {
     font-size: 13px;
@@ -1355,7 +1355,7 @@ input[type="number"] {
     margin-bottom: 60px;
   }
   .home-appointment_main {
-    padding: 0 20px 30px;
+    padding: 0 20px 60px;
   }
   .home-appointment_step {
     background-image: url(../img/step-bg-m.png);
@@ -1376,7 +1376,7 @@ input[type="number"] {
 @media screen and (max-width: 575px) {
   .home-appointment {
     padding-top: 30px;
-    margin-bottom: 43px;
+    margin-bottom: 80px;
   }
   .home-appointment_title {
     margin-bottom: 22px;
